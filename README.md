@@ -53,33 +53,47 @@
   <img src="https://capsule-render.vercel.app/api?type=transparent&color=3b82f6&height=30&section=header" width="100%" alt="Section divider">
 </div>
 
-## ⚙️ Architecture & tech stack
+## ⚙️ Architecture & engineering matrix
 
-<table align="center" width="100%" border="0" cellpadding="15" cellspacing="0">
+<div align="center">
+  <sub>Grounded in the public stacks behind <b>formae</b>, <b>MCP-register</b>, <b>Hermes</b>, <b>AudCifra</b> and <b>production-fix-flow</b>.</sub>
+</div>
+
+<br>
+
+<table align="center" width="100%" border="0" cellpadding="12" cellspacing="0">
   <tr>
-    <td width="33%" align="center" valign="top">
-      <h3>🧠 Data, ML & search</h3>
+    <td width="50%" align="center" valign="top">
+      <h3>🧠 AI, data & search</h3>
+      <i>Feature engineering, vector retrieval and NLP</i>
+      <br><br>
       <a href="https://skillicons.dev">
-        <img src="https://skillicons.dev/icons?i=python,pytorch,bash&theme=dark&perline=2" alt="Data and AI stack">
+        <img src="https://skillicons.dev/icons?i=python,pytorch,sklearn,bash&theme=dark" alt="AI, data and search stack">
       </a>
       <br><br>
-      <sub><i>FAISS, pandas, sentence-transformers, embeddings, scikit-learn and audio analysis</i></sub>
+      <sub><b>Supporting:</b> FAISS, pandas, sentence-transformers, embeddings, classical ML and audio analysis</sub>
     </td>
-    <td width="33%" align="center" valign="top">
-      <h3>🌩️ Backend & ops</h3>
+    <td width="50%" align="center" valign="top">
+      <h3>🌩️ Backend & distributed orchestration</h3>
+      <i>APIs, storage, workers and observability</i>
+      <br><br>
       <a href="https://skillicons.dev">
-        <img src="https://skillicons.dev/icons?i=fastapi,flask,postgres,docker&theme=dark&perline=2" alt="Backend stack">
+        <img src="https://skillicons.dev/icons?i=fastapi,flask,postgres,sqlite,redis,docker,githubactions&theme=dark" alt="Backend and distributed orchestration stack">
       </a>
       <br><br>
-      <sub><i>SQLite, Redis, Celery, FastMCP, GitHub Actions, JSON logging and YAML manifests</i></sub>
+      <sub><b>Supporting:</b> FastMCP, Celery, Pydantic, typed config, JSON logging, YAML manifests and containerized runtimes</sub>
     </td>
-    <td width="33%" align="center" valign="top">
-      <h3>⚛️ Core & interface</h3>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="top">
+      <h3>⚛️ Product core & platform interfaces</h3>
+      <i>Client-side architecture, WASM and delivery</i>
+      <br><br>
       <a href="https://skillicons.dev">
-        <img src="https://skillicons.dev/icons?i=rust,ts,react,vite&theme=dark&perline=2" alt="Core and interface stack">
+        <img src="https://skillicons.dev/icons?i=rust,ts,react,vite,tailwind&theme=dark" alt="Product core and platform interfaces stack">
       </a>
       <br><br>
-      <sub><i>WebAssembly, PWA delivery, MV3 extensions, browser vaults and GitHub Pages</i></sub>
+      <sub><b>Supporting:</b> WebAssembly, PWA delivery, MV3 extensions, browser-side privacy and GitHub Pages shipping</sub>
     </td>
   </tr>
 </table>
