@@ -9,11 +9,17 @@
   </defs>
   <rect width="760" height="240" rx="24" fill="url(#panel)"/>
   <rect x="1" y="1" width="758" height="238" rx="23" stroke="#2F3E53"/>
-  <text x="40" y="58" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">production-fix-flow</text>
-  <text x="40" y="84" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="15">Backend  •  orchestration and validation for operational API sequences</text>
+  <text x="40" y="58" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">production-fix-flow</text>
+  <text x="40" y="84" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="15">Backend  •  orchestration and validation for API flows</text>
   <text x="40" y="118" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Problem</text>
-  <text x="40" y="138" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">Complex API workflows become brittle without a clear execution engine, durable storage and observable control paths.</text>
+  <text x="40" y="138" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+    <tspan x="40" dy="0">Complex API workflows get brittle without an execution</tspan>
+    <tspan x="40" dy="16">engine, durable storage and observable control paths.</tspan>
+  </text>
   <text x="40" y="170" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Stack</text>
-  <text x="40" y="190" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">Python, FastAPI, PostgreSQL, Redis, Docker, async workers, logging and file pipelines</text>
-  <text x="40" y="218" fill="#A5F3FC" font-family="Segoe UI, Arial, sans-serif" font-size="14">Why it matters: highlights large-repo architecture, automation discipline and production-minded backend patterns.</text>
+  <text x="40" y="190" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+    <tspan x="40" dy="0">Python, FastAPI, PostgreSQL, Redis, Docker,</tspan>
+    <tspan x="40" dy="16">async workers, logging and file pipelines.</tspan>
+  </text>
+  <text x="40" y="220" fill="#A5F3FC" font-family="Segoe UI, Arial, sans-serif" font-size="13">Why it matters: production-minded backend architecture and automation discipline.</text>
 </svg>

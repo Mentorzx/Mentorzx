@@ -10,10 +10,16 @@
   <rect width="760" height="240" rx="24" fill="url(#panel)"/>
   <rect x="1" y="1" width="758" height="238" rx="23" stroke="#2F3E53"/>
   <text x="40" y="58" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">AudCifra</text>
-  <text x="40" y="84" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="15">Applied AI  •  audio-to-document pipeline for chords and lyrics</text>
+  <text x="40" y="84" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="15">Applied AI  •  audio-to-document pipeline for music</text>
   <text x="40" y="118" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Problem</text>
-  <text x="40" y="138" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">Turn raw music audio into a more usable artifact by combining transcription, chord detection and structured export.</text>
+  <text x="40" y="138" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+    <tspan x="40" dy="0">Turn raw music audio into a usable artifact with</tspan>
+    <tspan x="40" dy="16">transcription, chord detection and structured export.</tspan>
+  </text>
   <text x="40" y="170" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Stack</text>
-  <text x="40" y="190" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">Python, asyncio, ThreadPoolExecutor, configurable audio preprocessing and DOCX generation</text>
-  <text x="40" y="218" fill="#A5F3FC" font-family="Segoe UI, Arial, sans-serif" font-size="14">Why it matters: connects audio processing, concurrency and structured output generation in one workflow.</text>
+  <text x="40" y="190" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+    <tspan x="40" dy="0">Python, asyncio, ThreadPoolExecutor, configurable</tspan>
+    <tspan x="40" dy="16">audio preprocessing and DOCX generation.</tspan>
+  </text>
+  <text x="40" y="220" fill="#A5F3FC" font-family="Segoe UI, Arial, sans-serif" font-size="13">Why it matters: audio processing, concurrency and structured output in one flow.</text>
 </svg>
