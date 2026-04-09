@@ -1,15 +1,9 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,100:2563eb&height=180&section=header&text=Alex%20Lira&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Backend,%20Data%20%26%20Applied%20AI%20Engineer&descAlignY=75" width="100%" alt="Alex Lira header">
+  <img src="./assets/profile/hero-banner.svg" width="100%" alt="Engineering focus banner">
 </div>
 
 <div align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3b82f6&center=true&vCenter=true&width=700&lines=Validation-first+mindset;Local-first+product+boundaries;Building+resilient+pipelines;Applied+AI+with+backend+context" alt="Typing intro">
-  </a>
-</div>
-
-<div align="center">
-  <p>Computer Engineering student at <b>UFBA</b>, building software that stays useful under real constraints, from browser-side privacy and semantic search to API orchestration and ML-backed workflows.</p>
+  <p><b>Alex Lira</b>, backend, data and applied AI engineer, Computer Engineering student at <b>UFBA</b>, building software that stays useful under real constraints.</p>
 </div>
 
 <div align="center">
@@ -23,6 +17,129 @@
     <img src="https://img.shields.io/badge/Repositories-111827?style=for-the-badge&logo=github&logoColor=white" alt="Repositories">
   </a>
 </div>
+
+<div align="center">
+  <a href="https://www.linkedin.com/in/alexdlneto/">
+    <img src="https://img.shields.io/badge/LinkedIn-public%20profile-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn public profile">
+  </a>
+  <a href="https://github.com/Mentorzx">
+    <img src="https://komarev.com/ghpvc/?username=Mentorzx&style=flat-square&label=Profile+views&color=2563eb" alt="Profile views">
+  </a>
+  <a href="https://github.com/Mentorzx?tab=followers">
+    <img src="https://img.shields.io/github/followers/Mentorzx?style=flat-square&label=GitHub%20followers&color=2563eb" alt="GitHub followers">
+  </a>
+  <a href="https://github.com/Mentorzx?tab=following">
+    <img src="https://img.shields.io/badge/Following-6-111827?style=flat-square" alt="GitHub following">
+  </a>
+  <a href="https://github.com/Mentorzx?tab=repositories">
+    <img src="https://img.shields.io/badge/Public%20repos-11-111827?style=flat-square" alt="Public repositories">
+  </a>
+  <a href="https://github.com/Mentorzx?tab=stars">
+    <img src="https://img.shields.io/badge/Public%20stars-2-0f766e?style=flat-square" alt="Public stars">
+  </a>
+  <a href="https://github.com/Mentorzx?tab=followers">
+    <img src="https://img.shields.io/badge/Follow%20on%20GitHub-%40Mentorzx-111827?style=flat-square&logo=github&logoColor=white" alt="Follow on GitHub">
+  </a>
+</div>
+
+<div align="center">
+  <p><b>Compact stack map</b>, especially the bigger <code>production-fix-flow</code> toolbox and the Rust/WASM surface behind <code>formae</code>.</p>
+</div>
+
+<table align="center" width="100%" border="0" cellpadding="6" cellspacing="0">
+  <tr>
+    <td width="18%" valign="top"><b>Languages</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+      <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust">
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+      <img src="https://img.shields.io/badge/SQL-334155?style=flat-square" alt="SQL">
+      <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" alt="Bash">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>APIs & ops</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/FastAPI-05998B?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+      <img src="https://img.shields.io/badge/Flask-111827?style=flat-square&logo=flask&logoColor=white" alt="Flask">
+      <img src="https://img.shields.io/badge/FastMCP-2563eb?style=flat-square" alt="FastMCP">
+      <img src="https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white" alt="Celery">
+      <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis">
+      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+      <img src="https://img.shields.io/badge/SQLite-0F80CC?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite">
+      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+      <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions">
+      <img src="https://img.shields.io/badge/Granian-111827?style=flat-square" alt="Granian">
+      <img src="https://img.shields.io/badge/uvloop-0f766e?style=flat-square" alt="uvloop">
+      <img src="https://img.shields.io/badge/SlowAPI-7c3aed?style=flat-square" alt="SlowAPI">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Data & ML</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch">
+      <img src="https://img.shields.io/badge/Transformers-111827?style=flat-square" alt="Transformers">
+      <img src="https://img.shields.io/badge/SentenceTransformers-1d4ed8?style=flat-square" alt="Sentence Transformers">
+      <img src="https://img.shields.io/badge/scikit--learn-F89939?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn">
+      <img src="https://img.shields.io/badge/FAISS-2563eb?style=flat-square" alt="FAISS">
+      <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas">
+      <img src="https://img.shields.io/badge/Polars-CD792C?style=flat-square" alt="Polars">
+      <img src="https://img.shields.io/badge/DuckDB-F9C339?style=flat-square" alt="DuckDB">
+      <img src="https://img.shields.io/badge/LanceDB-0f766e?style=flat-square" alt="LanceDB">
+      <img src="https://img.shields.io/badge/Optuna-16A34A?style=flat-square" alt="Optuna">
+      <img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square" alt="MLflow">
+      <img src="https://img.shields.io/badge/SHAP-7c3aed?style=flat-square" alt="SHAP">
+      <img src="https://img.shields.io/badge/Ray-028CF0?style=flat-square" alt="Ray">
+      <img src="https://img.shields.io/badge/Dask-FC6E6B?style=flat-square" alt="Dask">
+      <img src="https://img.shields.io/badge/Recharts-ef4444?style=flat-square" alt="Recharts">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Validation</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Pydantic-E92063?style=flat-square" alt="Pydantic">
+      <img src="https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="Pytest">
+      <img src="https://img.shields.io/badge/Ruff-D7FF64?style=flat-square" alt="Ruff">
+      <img src="https://img.shields.io/badge/MyPy-2D5A9A?style=flat-square" alt="MyPy">
+      <img src="https://img.shields.io/badge/Pyright-0284c7?style=flat-square" alt="Pyright">
+      <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright">
+      <img src="https://img.shields.io/badge/Loguru-111827?style=flat-square" alt="Loguru">
+      <img src="https://img.shields.io/badge/orjson-1f2937?style=flat-square" alt="orjson">
+      <img src="https://img.shields.io/badge/msgspec-0f172a?style=flat-square" alt="msgspec">
+      <img src="https://img.shields.io/badge/aiofile-0369a1?style=flat-square" alt="aiofile">
+      <img src="https://img.shields.io/badge/aiocache-7c3aed?style=flat-square" alt="aiocache">
+      <img src="https://img.shields.io/badge/aiobreaker-7c3aed?style=flat-square" alt="aiobreaker">
+      <img src="https://img.shields.io/badge/dependency--injector-334155?style=flat-square" alt="dependency-injector">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Client & delivery</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
+      <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite">
+      <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind">
+      <img src="https://img.shields.io/badge/WebAssembly-654FF0?style=flat-square" alt="WebAssembly">
+      <img src="https://img.shields.io/badge/PWA-1f2937?style=flat-square" alt="PWA">
+      <img src="https://img.shields.io/badge/MV3-2563eb?style=flat-square" alt="MV3">
+      <img src="https://img.shields.io/badge/esbuild-FFCF00?style=flat-square" alt="esbuild">
+      <img src="https://img.shields.io/badge/Tailwind%20CLI-0ea5e9?style=flat-square" alt="Tailwind CLI">
+      <img src="https://img.shields.io/badge/GitHub%20Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>PFF Rust kernels</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/PyO3-1f2937?style=flat-square" alt="PyO3">
+      <img src="https://img.shields.io/badge/Maturin-2563eb?style=flat-square" alt="Maturin">
+      <img src="https://img.shields.io/badge/BLAKE3-111827?style=flat-square" alt="BLAKE3">
+      <img src="https://img.shields.io/badge/Rayon-0f766e?style=flat-square" alt="Rayon">
+      <img src="https://img.shields.io/badge/AHash-7c3aed?style=flat-square" alt="AHash">
+      <img src="https://img.shields.io/badge/sonic--rs-1d4ed8?style=flat-square" alt="sonic-rs">
+      <img src="https://img.shields.io/badge/Criterion-f97316?style=flat-square" alt="Criterion">
+      <img src="https://img.shields.io/badge/xxHash-334155?style=flat-square" alt="xxHash">
+    </td>
+  </tr>
+</table>
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=transparent&color=3b82f6&height=30&section=header" width="100%" alt="Section divider">
@@ -56,7 +173,7 @@
 ## ⚙️ Architecture & engineering matrix
 
 <div align="center">
-  <sub>Grounded in the public stacks behind <b>formae</b>, <b>MCP-register</b>, <b>Hermes</b>, <b>AudCifra</b> and <b>production-fix-flow</b>.</sub>
+  <p>Grounded in the public stacks behind <b>formae</b>, <b>MCP-register</b>, <b>Hermes</b>, <b>AudCifra</b> and <b>production-fix-flow</b>.</p>
 </div>
 
 <br>
@@ -71,7 +188,7 @@
         <img src="https://skillicons.dev/icons?i=python,pytorch,sklearn,bash&theme=dark" alt="AI, data and search stack">
       </a>
       <br><br>
-      <sub><b>Supporting:</b> FAISS, pandas, sentence-transformers, embeddings, classical ML and audio analysis</sub>
+      <p><b>Supporting:</b> FAISS, pandas, sentence-transformers, embeddings, classical ML and audio analysis.</p>
     </td>
     <td width="50%" align="center" valign="top">
       <h3>🌩️ Backend & distributed orchestration</h3>
@@ -81,7 +198,7 @@
         <img src="https://skillicons.dev/icons?i=fastapi,flask,postgres,sqlite,redis,docker,githubactions&theme=dark" alt="Backend and distributed orchestration stack">
       </a>
       <br><br>
-      <sub><b>Supporting:</b> FastMCP, Celery, Pydantic, typed config, JSON logging, YAML manifests and containerized runtimes</sub>
+      <p><b>Supporting:</b> FastMCP, Celery, Pydantic, typed config, JSON logging, YAML manifests and containerized runtimes.</p>
     </td>
   </tr>
   <tr>
@@ -93,7 +210,7 @@
         <img src="https://skillicons.dev/icons?i=rust,ts,react,vite,tailwind&theme=dark" alt="Product core and platform interfaces stack">
       </a>
       <br><br>
-      <sub><b>Supporting:</b> WebAssembly, PWA delivery, MV3 extensions, browser-side privacy and GitHub Pages shipping</sub>
+      <p><b>Supporting:</b> WebAssembly, PWA delivery, MV3 extensions, browser-side privacy and GitHub Pages shipping.</p>
     </td>
   </tr>
 </table>
