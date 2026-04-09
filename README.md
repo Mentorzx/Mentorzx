@@ -145,31 +145,6 @@
   <img src="https://capsule-render.vercel.app/api?type=transparent&color=3b82f6&height=30&section=header" width="100%" alt="Section divider">
 </div>
 
-## 📊 Engineering dashboard & telemetry
-
-<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="./assets/metrics/overview.svg" alt="Engineering overview" width="100%">
-    </td>
-    <td width="50%" align="center" valign="top">
-      <img src="./assets/metrics/languages.svg" alt="Edited-code language breakdown" width="100%">
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="https://streak-stats.demolab.com?user=Mentorzx&theme=tokyonight&hide_border=true&border_radius=12" alt="Commit consistency" width="100%">
-    </td>
-    <td width="50%" align="center" valign="top">
-      <img src="./assets/metrics/isocalendar.svg" alt="Isometric contribution calendar" width="100%">
-    </td>
-  </tr>
-</table>
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=transparent&color=3b82f6&height=30&section=header" width="100%" alt="Section divider">
-</div>
-
 ## ⚙️ Architecture & engineering matrix
 
 <div align="center">
@@ -211,6 +186,31 @@
       </a>
       <br><br>
       <p><b>Supporting:</b> WebAssembly, PWA delivery, MV3 extensions, browser-side privacy and GitHub Pages shipping.</p>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=transparent&color=3b82f6&height=30&section=header" width="100%" alt="Section divider">
+</div>
+
+## 📊 Engineering dashboard & telemetry
+
+<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="./assets/metrics/overview.svg" alt="Engineering overview" width="100%">
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="./assets/metrics/languages.svg" alt="Edited-code language breakdown" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="https://streak-stats.demolab.com?user=Mentorzx&theme=tokyonight&hide_border=true&border_radius=12" alt="Commit consistency" width="100%">
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="./assets/metrics/isocalendar.svg" alt="Isometric contribution calendar" width="100%">
     </td>
   </tr>
 </table>
