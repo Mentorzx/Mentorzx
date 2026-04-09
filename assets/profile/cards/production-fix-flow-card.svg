@@ -1,0 +1,19 @@
+<svg width="760" height="240" viewBox="0 0 760 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Production Fix Flow project card</title>
+  <desc id="desc">Backend orchestration platform for API-driven operational flows with observability and storage layers.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="760" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="240" rx="24" fill="url(#panel)"/>
+  <rect x="1" y="1" width="758" height="238" rx="23" stroke="#2F3E53"/>
+  <text x="40" y="58" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">production-fix-flow</text>
+  <text x="40" y="84" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="15">Backend  •  orchestration and validation for operational API sequences</text>
+  <text x="40" y="118" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Problem</text>
+  <text x="40" y="138" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">Complex API workflows become brittle without a clear execution engine, durable storage and observable control paths.</text>
+  <text x="40" y="170" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Stack</text>
+  <text x="40" y="190" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">Python, FastAPI, PostgreSQL, Redis, Docker, async workers, logging and file pipelines</text>
+  <text x="40" y="218" fill="#A5F3FC" font-family="Segoe UI, Arial, sans-serif" font-size="14">Why it matters: highlights large-repo architecture, automation discipline and production-minded backend patterns.</text>
+</svg>

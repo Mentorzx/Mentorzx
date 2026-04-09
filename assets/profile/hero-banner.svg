@@ -1,0 +1,56 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Alex Lira profile banner</title>
+  <desc id="desc">Dashboard-inspired banner presenting Alex Lira as a backend, data and applied AI engineer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="360" rx="28" fill="url(#bg)"/>
+  <g opacity="0.18" stroke="#2F3E53">
+    <path d="M72 76H1208"/>
+    <path d="M72 132H1208"/>
+    <path d="M72 188H1208"/>
+    <path d="M72 244H1208"/>
+    <path d="M72 300H1208"/>
+    <path d="M180 48V320"/>
+    <path d="M432 48V320"/>
+    <path d="M684 48V320"/>
+    <path d="M936 48V320"/>
+    <path d="M1188 48V320"/>
+  </g>
+  <rect x="48" y="48" width="1184" height="264" rx="24" fill="#0B1220" stroke="#2D3748"/>
+  <circle cx="114" cy="108" r="8" fill="#22C55E"/>
+  <circle cx="144" cy="108" r="8" fill="#F59E0B"/>
+  <circle cx="174" cy="108" r="8" fill="#38BDF8"/>
+  <text x="96" y="160" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">Alex Lira</text>
+  <text x="96" y="196" fill="#9CA3AF" font-family="Segoe UI, Arial, sans-serif" font-size="20">Backend, data and automation engineer</text>
+  <text x="96" y="226" fill="#9CA3AF" font-family="Segoe UI, Arial, sans-serif" font-size="20">Applied AI where it earns its place</text>
+  <text x="96" y="268" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="16">Salvador, BA, Brazil  •  Computer Engineering @ UFBA  •  linkedin.com/in/alexdlneto</text>
+  <rect x="736" y="86" width="192" height="76" rx="16" fill="url(#panel)" stroke="#2F3E53"/>
+  <text x="760" y="116" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="1.2">FOCUS 01</text>
+  <text x="760" y="146" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Python services</text>
+  <text x="760" y="165" fill="#A5B4C3" font-family="Segoe UI, Arial, sans-serif" font-size="14">APIs, orchestration and workflows</text>
+  <rect x="948" y="86" width="192" height="76" rx="16" fill="url(#panel)" stroke="#2F3E53"/>
+  <text x="972" y="116" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="1.2">FOCUS 02</text>
+  <text x="972" y="146" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Search and NLP</text>
+  <text x="972" y="165" fill="#A5B4C3" font-family="Segoe UI, Arial, sans-serif" font-size="14">Vector indexing and classification</text>
+  <rect x="736" y="182" width="192" height="76" rx="16" fill="url(#panel)" stroke="#2F3E53"/>
+  <text x="760" y="212" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="1.2">FOCUS 03</text>
+  <text x="760" y="242" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Local-first product</text>
+  <text x="760" y="261" fill="#A5B4C3" font-family="Segoe UI, Arial, sans-serif" font-size="14">Privacy-aware frontend boundaries</text>
+  <rect x="948" y="182" width="192" height="76" rx="16" fill="url(#panel)" stroke="#2F3E53"/>
+  <text x="972" y="212" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="1.2">FOCUS 04</text>
+  <text x="972" y="242" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Observability mindset</text>
+  <text x="972" y="261" fill="#A5B4C3" font-family="Segoe UI, Arial, sans-serif" font-size="14">Validation, logs and maintainability</text>
+  <path d="M700 70L700 292" stroke="url(#accent)" stroke-width="2"/>
+</svg>

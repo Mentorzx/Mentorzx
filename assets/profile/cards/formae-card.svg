@@ -1,0 +1,19 @@
+<svg width="760" height="240" viewBox="0 0 760 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Formae project card</title>
+  <desc id="desc">Local-first academic assistant for UFBA with PWA, extension and Rust WASM core.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="760" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="240" rx="24" fill="url(#panel)"/>
+  <rect x="1" y="1" width="758" height="238" rx="23" stroke="#2F3E53"/>
+  <text x="40" y="58" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Formae</text>
+  <text x="40" y="84" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="15">Product  •  local-first academic assistant for UFBA</text>
+  <text x="40" y="118" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Problem</text>
+  <text x="40" y="138" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">Academic planning tools usually centralize sensitive student data and treat privacy as an afterthought.</text>
+  <text x="40" y="170" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Stack</text>
+  <text x="40" y="190" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">React, Vite, TypeScript, MV3 extension, GitHub Pages, Rust/WASM</text>
+  <text x="40" y="218" fill="#A5F3FC" font-family="Segoe UI, Arial, sans-serif" font-size="14">Why it matters: combines privacy-aware product design, browser integration and a shared systems core.</text>
+</svg>
