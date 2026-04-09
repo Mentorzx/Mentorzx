@@ -1,12 +1,8 @@
 <picture>
-  <img src="./assets/profile/hero-banner.svg" alt="Alex Lira | Backend, Data, Applied AI" width="100%">
+  <img src="./assets/profile/hero-banner.svg" alt="Dashboard-style overview of engineering focus areas" width="100%">
 </picture>
 
-# Alex Lira
-
-Backend, data and automation engineer building practical software with a growing focus on applied AI.
-
-Based in Salvador, BA, Brazil. I am a Computer Engineering student at UFBA and I like systems that stay useful under real constraints: APIs, workflows, search, observability, local-first product design and ML features that actually earn their complexity.
+Computer Engineering student at UFBA, building backend systems, search workflows and applied AI that stay useful under real constraints.
 
 <p>
   <a href="https://www.linkedin.com/in/alexdlneto/">LinkedIn</a>

@@ -1,6 +1,6 @@
 <svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Alex Lira profile banner</title>
-  <desc id="desc">Dashboard-inspired banner presenting Alex Lira as a backend, data and applied AI engineer.</desc>
+  <title id="title">Engineering focus dashboard banner</title>
+  <desc id="desc">Dashboard-inspired banner highlighting backend systems, data workflows, applied AI, search, local-first design and observability.</desc>
   <defs>
     <linearGradient id="bg" x1="80" y1="40" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0D1117"/>
@@ -32,10 +32,10 @@
   <circle cx="114" cy="108" r="8" fill="#22C55E"/>
   <circle cx="144" cy="108" r="8" fill="#F59E0B"/>
   <circle cx="174" cy="108" r="8" fill="#38BDF8"/>
-  <text x="96" y="160" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">Alex Lira</text>
-  <text x="96" y="196" fill="#9CA3AF" font-family="Segoe UI, Arial, sans-serif" font-size="20">Backend, data and automation engineer</text>
-  <text x="96" y="226" fill="#9CA3AF" font-family="Segoe UI, Arial, sans-serif" font-size="20">Applied AI where it earns its place</text>
-  <text x="96" y="268" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="16">Salvador, BA, Brazil  •  Computer Engineering @ UFBA  •  linkedin.com/in/alexdlneto</text>
+  <text x="96" y="146" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="14" letter-spacing="1.8">PORTFOLIO SNAPSHOT</text>
+  <text x="96" y="192" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700">Backend systems, data workflows</text>
+  <text x="96" y="228" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">and applied AI with product context</text>
+  <text x="96" y="270" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="16">APIs  •  search  •  local-first design  •  validation  •  observability</text>
   <rect x="736" y="86" width="192" height="76" rx="16" fill="url(#panel)" stroke="#2F3E53"/>
   <text x="760" y="116" fill="#8B9CB5" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="1.2">FOCUS 01</text>
   <text x="760" y="146" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Python services</text>
