@@ -3,52 +3,91 @@
 </div>
 
 <div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=3B82F6&center=true&vCenter=true&width=720&lines=Building+resilient+pipelines;Validation-first+mindset;Local-first+product+boundaries;Applied+AI+with+backend+context" alt="Typing intro">
+  </a>
+</div>
+
+<div align="center">
   <p><b>Alex Lira</b>, backend, data and applied AI engineer, Computer Engineering student at <b>UFBA</b>, building software that stays useful under real constraints.</p>
 </div>
 
-<div align="center">
-  <a href="https://www.linkedin.com/in/alexdlneto/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  <a href="https://mentorzx.github.io/formae/">
-    <img src="https://img.shields.io/badge/Formae%20Live-2563eb?style=for-the-badge&logo=githubpages&logoColor=white" alt="Formae live">
-  </a>
-  <a href="https://github.com/Mentorzx?tab=repositories">
-    <img src="https://img.shields.io/badge/Repositories-111827?style=for-the-badge&logo=github&logoColor=white" alt="Repositories">
-  </a>
-</div>
+<table align="center" border="0" cellpadding="6" cellspacing="10">
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/alexdlneto/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://mentorzx.github.io/formae/">
+        <img src="https://img.shields.io/badge/Formae%20Live-2563eb?style=for-the-badge&logo=githubpages&logoColor=white" alt="Formae live">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Mentorzx?tab=repositories">
+        <img src="https://img.shields.io/badge/Repositories-111827?style=for-the-badge&logo=github&logoColor=white" alt="Repositories">
+      </a>
+    </td>
+  </tr>
+</table>
 
-<div align="center">
-  <a href="https://www.linkedin.com/in/alexdlneto/">
-    <img src="https://img.shields.io/badge/LinkedIn-public%20profile-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn public profile">
-  </a>
-  <a href="https://github.com/Mentorzx">
-    <img src="https://komarev.com/ghpvc/?username=Mentorzx&style=flat-square&label=Profile+views&color=2563eb" alt="Profile views">
-  </a>
-  <a href="https://github.com/Mentorzx?tab=followers">
-    <img src="https://img.shields.io/github/followers/Mentorzx?style=flat-square&label=GitHub%20followers&color=2563eb" alt="GitHub followers">
-  </a>
-  <a href="https://github.com/Mentorzx?tab=following">
-    <img src="https://img.shields.io/badge/Following-6-111827?style=flat-square" alt="GitHub following">
-  </a>
-  <a href="https://github.com/Mentorzx?tab=repositories">
-    <img src="https://img.shields.io/badge/Public%20repos-11-111827?style=flat-square" alt="Public repositories">
-  </a>
-  <a href="https://github.com/Mentorzx?tab=stars">
-    <img src="https://img.shields.io/badge/Public%20stars-2-0f766e?style=flat-square" alt="Public stars">
-  </a>
-  <a href="https://github.com/Mentorzx?tab=followers">
-    <img src="https://img.shields.io/badge/Follow%20on%20GitHub-%40Mentorzx-111827?style=flat-square&logo=github&logoColor=white" alt="Follow on GitHub">
-  </a>
-</div>
+<table align="center" border="0" cellpadding="6" cellspacing="10">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Mentorzx">
+        <img src="https://komarev.com/ghpvc/?username=Mentorzx&style=flat-square&label=Profile+views&color=2563eb" alt="Profile views">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Mentorzx?tab=followers">
+        <img src="https://img.shields.io/github/followers/Mentorzx?style=flat-square&label=GitHub%20followers&color=2563eb" alt="GitHub followers">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Mentorzx?tab=following">
+        <img src="https://img.shields.io/badge/Following-6-334155?style=flat-square" alt="GitHub following">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Mentorzx?tab=repositories">
+        <img src="https://img.shields.io/badge/Public%20repos-11-334155?style=flat-square" alt="Public repositories">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Mentorzx?tab=stars">
+        <img src="https://img.shields.io/badge/Public%20stars-2-0f766e?style=flat-square" alt="Public stars">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Mentorzx?tab=followers">
+        <img src="https://img.shields.io/badge/Follow%20on%20GitHub-%40Mentorzx-111827?style=flat-square&logo=github&logoColor=white" alt="Follow on GitHub">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Mentorzx">
+        <img src="https://img.shields.io/badge/Active%20since-2020-1d4ed8?style=flat-square" alt="Active since 2020">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Mentorzx">
+        <img src="https://img.shields.io/badge/Hireable-yes-16a34a?style=flat-square" alt="Hireable">
+      </a>
+    </td>
+  </tr>
+</table>
 
 <div align="center">
   <p><b>Compact stack map</b>, especially the bigger <code>production-fix-flow</code> toolbox and the Rust/WASM surface behind <code>formae</code>.</p>
 </div>
 
-<table align="center" width="100%" border="0" cellpadding="6" cellspacing="0">
+<table align="center" width="100%" border="0" cellpadding="8" cellspacing="0">
   <tr>
-    <td width="18%" valign="top"><b>Languages</b></td>
+    <td width="18%" valign="top">
+      <img src="https://img.shields.io/badge/Languages-2563EB?style=flat-square" alt="Languages">
+    </td>
     <td>
       <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
       <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust">
@@ -58,7 +97,9 @@
     </td>
   </tr>
   <tr>
-    <td valign="top"><b>APIs & ops</b></td>
+    <td valign="top">
+      <img src="https://img.shields.io/badge/APIs%20%26%20ops-0F766E?style=flat-square" alt="APIs and ops">
+    </td>
     <td>
       <img src="https://img.shields.io/badge/FastAPI-05998B?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
       <img src="https://img.shields.io/badge/Flask-111827?style=flat-square&logo=flask&logoColor=white" alt="Flask">
@@ -75,7 +116,9 @@
     </td>
   </tr>
   <tr>
-    <td valign="top"><b>Data & ML</b></td>
+    <td valign="top">
+      <img src="https://img.shields.io/badge/Data%20%26%20ML-F97316?style=flat-square" alt="Data and ML">
+    </td>
     <td>
       <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch">
       <img src="https://img.shields.io/badge/Transformers-111827?style=flat-square" alt="Transformers">
@@ -95,7 +138,9 @@
     </td>
   </tr>
   <tr>
-    <td valign="top"><b>Validation</b></td>
+    <td valign="top">
+      <img src="https://img.shields.io/badge/Validation-C026D3?style=flat-square" alt="Validation">
+    </td>
     <td>
       <img src="https://img.shields.io/badge/Pydantic-E92063?style=flat-square" alt="Pydantic">
       <img src="https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="Pytest">
@@ -113,7 +158,9 @@
     </td>
   </tr>
   <tr>
-    <td valign="top"><b>Client & delivery</b></td>
+    <td valign="top">
+      <img src="https://img.shields.io/badge/Client%20%26%20delivery-7C3AED?style=flat-square" alt="Client and delivery">
+    </td>
     <td>
       <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
       <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite">
@@ -127,7 +174,9 @@
     </td>
   </tr>
   <tr>
-    <td valign="top"><b>PFF Rust kernels</b></td>
+    <td valign="top">
+      <img src="https://img.shields.io/badge/PFF%20Rust%20kernels-EA580C?style=flat-square" alt="PFF Rust kernels">
+    </td>
     <td>
       <img src="https://img.shields.io/badge/PyO3-1f2937?style=flat-square" alt="PyO3">
       <img src="https://img.shields.io/badge/Maturin-2563eb?style=flat-square" alt="Maturin">
@@ -196,24 +245,31 @@
 
 ## 📊 Engineering dashboard & telemetry
 
-<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="./assets/metrics/overview.svg" alt="Engineering overview" width="100%">
-    </td>
-    <td width="50%" align="center" valign="top">
-      <img src="./assets/metrics/languages.svg" alt="Edited-code language breakdown" width="100%">
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="https://streak-stats.demolab.com?user=Mentorzx&theme=tokyonight&hide_border=true&border_radius=12" alt="Commit consistency" width="100%">
-    </td>
-    <td width="50%" align="center" valign="top">
-      <img src="./assets/metrics/isocalendar.svg" alt="Isometric contribution calendar" width="100%">
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <p>Bigger cards, stacked vertically, because tiny telemetry is just decorative suffering.</p>
+</div>
+
+<div align="center">
+  <img src="./assets/metrics/overview.svg" alt="Engineering overview" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="./assets/metrics/languages.svg" alt="Edited-code language breakdown" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=Mentorzx&theme=tokyonight&hide_border=true&border_radius=12" alt="Commit consistency" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="./assets/metrics/isocalendar.svg" alt="Isometric contribution calendar" width="100%">
+</div>
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=transparent&color=3b82f6&height=30&section=header" width="100%" alt="Section divider">
