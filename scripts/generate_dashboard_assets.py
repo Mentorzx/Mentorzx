@@ -586,6 +586,7 @@ def tech_chip(
     height: int = 26,
     fill: str = SURFACE_BG,
     stroke: str = "#1E293B",
+    fill_opacity: float | None = None,
 ) -> tuple[str, int]:
     meta = tech_meta(label)
     icon_name = cast(str | None, meta["icon"])
@@ -594,7 +595,16 @@ def tech_chip(
     width = chip_width(label, font_size=font_size, has_icon=has_icon)
     content_y = y + (height - 16) // 2
     parts = [
-        rect(x, y, width, height, fill, radius=min(10, height // 2), stroke=stroke)
+        rect(
+            x,
+            y,
+            width,
+            height,
+            fill,
+            radius=min(10, height // 2),
+            stroke=stroke,
+            fill_opacity=fill_opacity,
+        )
     ]
     cursor = x + 12
     if icon_name is not None:
@@ -661,6 +671,7 @@ def render_chip_rows(
     font_size: int = 11,
     justify: bool = False,
     justify_last_row: bool = False,
+    tint_bg: bool = False,
 ) -> tuple[list[str], int]:
     parts: list[str] = []
     cursor_y = y
@@ -683,12 +694,16 @@ def render_chip_rows(
             )
 
         for chip_index, (label, width) in enumerate(row):
+            fill = cast(str, tech_meta(label)["color"]) if tint_bg else SURFACE_BG
+            fill_opacity = 0.1 if tint_bg else None
             chip_svg, _ = tech_chip(
                 int(round(cursor_x)),
                 cursor_y,
                 label,
                 font_size=font_size,
                 height=chip_height,
+                fill=fill,
+                fill_opacity=fill_opacity,
             )
             parts.append(chip_svg)
             cursor_x += width
@@ -747,12 +762,15 @@ def rect(
     stroke: str | None = None,
     stroke_width: float = 1,
     opacity: float | None = None,
+    fill_opacity: float | None = None,
 ) -> str:
     extra: list[str] = []
     if stroke:
         extra.append(f' stroke="{stroke}" stroke-width="{stroke_width}"')
     if opacity is not None:
         extra.append(f' opacity="{opacity}"')
+    if fill_opacity is not None:
+        extra.append(f' fill-opacity="{fill_opacity}"')
     attrs = "".join(extra)
     return (
         f'<rect x="{x}" y="{y}" width="{width}" height="{height}" '
@@ -1692,7 +1710,7 @@ def generate_hero_banner_svg() -> str:
                 size=15,
                 weight=600,
                 fill=ACCENT_ALT,
-                line_gap=18,
+                line_gap=21,
             ),
         ]
     )
@@ -1731,7 +1749,7 @@ def generate_hero_banner_svg() -> str:
                     subtitle_lines,
                     size=12,
                     fill="#AEBCCD",
-                    line_gap=18,
+                    line_gap=21,
                 ),
                 animated_bar(
                     x + 18,
@@ -1748,19 +1766,31 @@ def generate_hero_banner_svg() -> str:
 
     parts.extend(section_kicker(80, primary_stack_y, "Primary stack", 138))
 
+    gap_x = 12
+    gap_y = 12
+    max_w = 596
+
     chip_x = 80
     chip_y = primary_stack_y + 36
     for label, _, color in PRIMARY_STACK_ITEMS:
         chip_svg, width = tech_chip(chip_x, chip_y, label, height=28, font_size=12)
+        if chip_x + width > 80 + max_w:
+            chip_x = 80
+            chip_y += 28 + gap_y
+            chip_svg, width = tech_chip(chip_x, chip_y, label, height=28, font_size=12)
         parts.append(chip_svg.replace('stroke="#1E293B"', f'stroke="{color}"'))
-        chip_x += width + 10
+        chip_x += width + gap_x
 
     chip_x = 80
-    chip_y = primary_stack_y + 74
+    chip_y += 28 + 18
     for label, _, color in SECONDARY_STACK_ITEMS:
         chip_svg, width = tech_chip(chip_x, chip_y, label, height=26, font_size=11)
+        if chip_x + width > 80 + max_w:
+            chip_x = 80
+            chip_y += 26 + gap_y
+            chip_svg, width = tech_chip(chip_x, chip_y, label, height=26, font_size=11)
         parts.append(chip_svg.replace('stroke="#1E293B"', f'stroke="{color}"'))
-        chip_x += width + 8
+        chip_x += width + gap_x
 
     parts.append("</svg>")
     return "".join(parts)
@@ -1828,19 +1858,32 @@ def generate_engineering_matrix_svg(
     )
 
     parts.extend(section_kicker(50, 140, "Primary stack", 136))
+
+    gap_x = 12
+    gap_y = 12
+    max_w = 1180
+
     x = 50
     y = 174
     for label, icon_name, color in PRIMARY_STACK_ITEMS:
         chip_svg, width = tech_chip(x, y, label, height=28, font_size=12)
+        if x + width > 50 + max_w:
+            x = 50
+            y += 28 + gap_y
+            chip_svg, width = tech_chip(x, y, label, height=28, font_size=12)
         parts.append(chip_svg.replace('stroke="#1E293B"', f'stroke="{color}"'))
-        x += width + 10
+        x += width + gap_x
 
     x = 50
-    y = 212
+    y += 28 + 18
     for label, _, color in SECONDARY_STACK_ITEMS:
         chip_svg, width = tech_chip(x, y, label, height=26, font_size=11)
+        if x + width > 50 + max_w:
+            x = 50
+            y += 26 + gap_y
+            chip_svg, width = tech_chip(x, y, label, height=26, font_size=11)
         parts.append(chip_svg.replace('stroke="#1E293B"', f'stroke="{color}"'))
-        x += width + 8
+        x += width + gap_x
 
     parts.append(
         '<path d="M48 254H1232" stroke="#1E293B" stroke-dasharray="4 7" opacity="0.42" />'
@@ -1873,10 +1916,8 @@ def generate_engineering_matrix_svg(
             items,
             max_width=936,
             chip_height=26,
-            gap_x=8,
-            gap_y=10,
-            justify=True,
-            justify_last_row=True,
+            gap_x=12,
+            gap_y=12,
         )
         parts.extend(chips)
         row_y += max(row_height, used_height + 32) + 10
@@ -1957,6 +1998,8 @@ def generate_engineering_matrix_svg(
                 str(meta["color"]),
                 radius=0,
                 opacity=0.72,
+                stroke="#0F172A",
+                stroke_width=2,
             )
         )
         parts.append(
@@ -2013,23 +2056,39 @@ def generate_engineering_matrix_svg(
         repo_count = next(count for lang, _, count in language_rows if lang == language)
         label_width = max(132, estimate_text_width(language, font_size=13) + 78)
         target_x = segment_start + 8
-        candidate_lanes = sorted(
-            range(len(lane_end)),
-            key=lambda lane_index: (
-                lane_end[lane_index] > target_x,
-                lane_end[lane_index],
-            ),
-        )
-        lane_index = candidate_lanes[0]
-        label_x = max(target_x, lane_end[lane_index] + 16)
-        label_x = min(label_x, SUITE_WIDTH - label_width - 32)
+
+        chosen_lane = -1
+        clamped_x = 0
+        for i in range(len(lane_end)):
+            cand_x = max(target_x, lane_end[i] + 16)
+            clamped = min(cand_x, SUITE_WIDTH - label_width - 32)
+            if clamped > lane_end[i] + 2:
+                chosen_lane = i
+                clamped_x = clamped
+                break
+
+        if chosen_lane == -1:
+            chosen_lane = len(lane_end)
+            lane_end.append(bar_x - 1)
+            lane_y.append(lane_y[-1] + 32)
+            cand_x = max(target_x, lane_end[chosen_lane] + 16)
+            clamped_x = min(cand_x, SUITE_WIDTH - label_width - 32)
+
+        lane_index = chosen_lane
+        label_x = clamped_x
         label_y = lane_y[lane_index]
         lane_end[lane_index] = label_x + label_width
+
+        x_centro = segment_start + segment_width // 2
+        y_start = bar_y + bar_height + 2
+        y_mid = y_start + 10
+        y_end = label_y - 14
+
         parts.extend(
             [
-                f'<path d="M{segment_start + 6} {bar_y + bar_height + 2} '
-                f'V{label_y - 10}" stroke="{color}" opacity="0.18" '
-                'stroke-width="1.2" stroke-linecap="round" />',
+                f'<polyline points="{x_centro},{y_start} {x_centro},{y_mid} {label_x+10},{y_mid} {label_x+10},{y_end}" '
+                f'stroke="{color}" opacity="0.25" fill="none" '
+                'stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />',
                 f'<image href="{get_skillicon_base64(icon_name)}" '
                 f'x="{label_x}" y="{label_y - 2}" width="16" height="16" />',
                 text(label_x + 22, label_y + 10, language, size=13, weight=700),
@@ -2357,7 +2416,7 @@ def generate_project_card_svg(config: dict[str, Any]) -> str:
             summary_lines,
             size=15,
             fill=SOFT_TEXT,
-            line_gap=18,
+            line_gap=21,
         )
     )
     parts.append(
@@ -2390,9 +2449,8 @@ def generate_project_card_svg(config: dict[str, Any]) -> str:
         max_width=section_width,
         chip_height=24,
         font_size=10,
-        gap_y=10,
-        justify=True,
-        justify_last_row=True,
+        gap_y=8,
+        tint_bg=True,
     )
     stack_chips, _ = render_chip_rows(
         stack_x,
@@ -2401,9 +2459,8 @@ def generate_project_card_svg(config: dict[str, Any]) -> str:
         max_width=section_width,
         chip_height=24,
         font_size=10,
-        gap_y=10,
-        justify=True,
-        justify_last_row=True,
+        gap_y=8,
+        tint_bg=True,
     )
     parts.extend(proof_chips)
     parts.extend(stack_chips)
