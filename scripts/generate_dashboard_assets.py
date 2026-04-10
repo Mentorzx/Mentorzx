@@ -593,7 +593,9 @@ def tech_chip(
     has_icon = icon_name is not None
     width = chip_width(label, font_size=font_size, has_icon=has_icon)
     content_y = y + (height - 16) // 2
-    parts = [rect(x, y, width, height, fill, radius=min(10, height // 2), stroke=stroke)]
+    parts = [
+        rect(x, y, width, height, fill, radius=min(10, height // 2), stroke=stroke)
+    ]
     cursor = x + 12
     if icon_name is not None:
         parts.append(
@@ -1574,13 +1576,32 @@ def generate_summary_svg(
 
 def generate_hero_banner_svg() -> str:
     focus_blocks = [
-        ("Data + AI systems", ["Embeddings, knowledge", "graphs and pipelines."], ACCENT_ALT),
-        ("Backend engineering", ["Service boundaries,", "observability and APIs."], TEAL),
-        ("Production ops", ["Kafka automations,", "Elastic + Zabbix + Linux."], WARNING),
-        ("Product delivery", ["Local-first UX,", "shared systems core and PWA."], VIOLET),
+        (
+            "Data + AI systems",
+            ["Embeddings, knowledge", "graphs and pipelines."],
+            ACCENT_ALT,
+        ),
+        (
+            "Backend engineering",
+            ["Service boundaries,", "observability and APIs."],
+            TEAL,
+        ),
+        (
+            "Production ops",
+            ["Kafka automations,", "Elastic + Zabbix + Linux."],
+            WARNING,
+        ),
+        (
+            "Product delivery",
+            ["Local-first UX,", "shared systems core and PWA."],
+            VIOLET,
+        ),
     ]
     hero_typing_phrase = "backend | data / ai | automation"
-    hero_typing_width = estimate_text_width(hero_typing_phrase, font_size=13) + 8
+    padding_x = 26
+    hero_typing_width = (
+        estimate_text_width(hero_typing_phrase, font_size=13) + padding_x
+    )
     hero_cursor_start = 252
     hero_cursor_end = hero_cursor_start + hero_typing_width - 10
     best_fit_lines = [
@@ -1623,7 +1644,9 @@ def generate_hero_banner_svg() -> str:
         "text{font-family:'Segoe UI',Arial,sans-serif}",
         "</style>",
         rect(0, 0, 1280, 500, "url(#heroCanvas)", radius=28),
-        animated_circle(1028, 62, 176, "url(#heroGlow)", "0.34;0.86;0.34", "8.2s", opacity=0.82),
+        animated_circle(
+            1028, 62, 176, "url(#heroGlow)", "0.34;0.86;0.34", "8.2s", opacity=0.82
+        ),
         rect(48, 48, 1184, 404, "url(#heroPanel)", radius=24, stroke=BORDER),
         '<path d="M78 132H676" stroke="#23314D" stroke-dasharray="4 7" opacity="0.48" />',
         '<path d="M78 202H676" stroke="#23314D" stroke-dasharray="4 7" opacity="0.34" />',
@@ -1683,7 +1706,7 @@ def generate_hero_banner_svg() -> str:
             'font-size="13" font-weight="700" '
             'font-family="Consolas, SFMono-Regular, Menlo, monospace">|'
             f'<animate attributeName="x" values="{hero_cursor_end};'
-            f'{hero_cursor_end};{hero_cursor_start};{hero_cursor_start};'
+            f"{hero_cursor_end};{hero_cursor_start};{hero_cursor_start};"
             f'{hero_cursor_end}" '
             'keyTimes="0;0.7;0.8;0.88;1" dur="9.6s" '
             'repeatCount="indefinite" />'
@@ -1772,15 +1795,35 @@ def generate_engineering_matrix_svg(
         "text{font-family:'Segoe UI',Arial,sans-serif}",
         "</style>",
         rect(0, 0, SUITE_WIDTH, SUITE_HEIGHT, "url(#suiteCanvas)", radius=28),
-        rect(18, 18, SUITE_INNER_WIDTH, SUITE_HEIGHT - 36, "url(#suiteSurface)", radius=24, stroke=BORDER),
+        rect(
+            18,
+            18,
+            SUITE_INNER_WIDTH,
+            SUITE_HEIGHT - 36,
+            "url(#suiteSurface)",
+            radius=24,
+            stroke=BORDER,
+        ),
         '<path d="M48 120H1232" stroke="#1E293B" stroke-dasharray="5 7" opacity="0.56" />',
     ]
 
     parts.extend(section_kicker(50, 42, "Profile stack suite", 208))
     parts.extend(
         [
-            text(50, 88, "Compact stack map + language telemetry + engineering matrix", size=28, weight=700),
-            text(50, 108, "Repo data is merged with verified profile and curriculum evidence, then normalized for README readability.", size=14, fill=MUTED),
+            text(
+                50,
+                88,
+                "Compact stack map + language telemetry + engineering matrix",
+                size=28,
+                weight=700,
+            ),
+            text(
+                50,
+                108,
+                "Repo data is merged with verified profile and curriculum evidence, then normalized for README readability.",
+                size=14,
+                fill=MUTED,
+            ),
         ]
     )
 
@@ -1799,17 +1842,31 @@ def generate_engineering_matrix_svg(
         parts.append(chip_svg.replace('stroke="#1E293B"', f'stroke="{color}"'))
         x += width + 8
 
-    parts.append('<path d="M48 254H1232" stroke="#1E293B" stroke-dasharray="4 7" opacity="0.42" />')
+    parts.append(
+        '<path d="M48 254H1232" stroke="#1E293B" stroke-dasharray="4 7" opacity="0.42" />'
+    )
     parts.extend(section_kicker(50, 272, "Compact stack map", 188))
 
     row_y = 308
     for label, items, color in STACK_MAP_GROUPS:
         row_height = 84
-        parts.append(rect(50, row_y, 1180, row_height, CARD_BG, radius=16, stroke="#22314A"))
-        parts.append(rect(50, row_y, 220, row_height, SURFACE_BG, radius=16, stroke="#22314A"))
-        parts.append(rect(66, row_y + 28, 138, 28, CANVAS_BG, radius=14, stroke="#22314A"))
-        parts.append(text(135, row_y + 47, label, size=12, weight=700, fill=color, anchor="middle"))
-        parts.append(animated_bar(80, row_y + 62, 96, 4, color, 0.22, "80;108;80", "6.2s"))
+        parts.append(
+            rect(50, row_y, 1180, row_height, CARD_BG, radius=16, stroke="#22314A")
+        )
+        parts.append(
+            rect(50, row_y, 220, row_height, SURFACE_BG, radius=16, stroke="#22314A")
+        )
+        parts.append(
+            rect(66, row_y + 28, 138, 28, CANVAS_BG, radius=14, stroke="#22314A")
+        )
+        parts.append(
+            text(
+                135, row_y + 47, label, size=12, weight=700, fill=color, anchor="middle"
+            )
+        )
+        parts.append(
+            animated_bar(80, row_y + 62, 96, 4, color, 0.22, "80;108;80", "6.2s")
+        )
         chips, used_height = flow_tech_chips(
             282,
             row_y + 16,
@@ -1824,7 +1881,9 @@ def generate_engineering_matrix_svg(
         parts.extend(chips)
         row_y += max(row_height, used_height + 32) + 10
 
-    parts.append(f'<path d="M48 {row_y + 10}H1232" stroke="#1E293B" stroke-dasharray="4 7" opacity="0.32" />')
+    parts.append(
+        f'<path d="M48 {row_y + 10}H1232" stroke="#1E293B" stroke-dasharray="4 7" opacity="0.32" />'
+    )
 
     languages_card_y = row_y + 28
     parts.extend(section_kicker(50, languages_card_y, "Most used languages", 188))
@@ -1839,7 +1898,11 @@ def generate_engineering_matrix_svg(
             stroke="#22314A",
         )
     )
-    parts.append(text(72, languages_card_y + 74, "Most used public languages", size=24, weight=700))
+    parts.append(
+        text(
+            72, languages_card_y + 74, "Most used public languages", size=24, weight=700
+        )
+    )
     parts.append(
         text(
             72,
@@ -1952,11 +2015,14 @@ def generate_engineering_matrix_svg(
         target_x = segment_start + 8
         candidate_lanes = sorted(
             range(len(lane_end)),
-            key=lambda lane_index: (lane_end[lane_index] > target_x, lane_end[lane_index]),
+            key=lambda lane_index: (
+                lane_end[lane_index] > target_x,
+                lane_end[lane_index],
+            ),
         )
         lane_index = candidate_lanes[0]
         label_x = max(target_x, lane_end[lane_index] + 16)
-        label_x = min(label_x, bar_x + bar_width - label_width)
+        label_x = min(label_x, SUITE_WIDTH - label_width - 32)
         label_y = lane_y[lane_index]
         lane_end[lane_index] = label_x + label_width
         parts.extend(
@@ -1987,7 +2053,9 @@ def generate_engineering_matrix_svg(
         )
 
     matrix_y = languages_card_y + language_card_height + 58
-    parts.append(f'<path d="M48 {matrix_y - 20}H1232" stroke="#1E293B" stroke-dasharray="4 7" opacity="0.28" />')
+    parts.append(
+        f'<path d="M48 {matrix_y - 20}H1232" stroke="#1E293B" stroke-dasharray="4 7" opacity="0.28" />'
+    )
     parts.extend(section_kicker(50, matrix_y, "Engineering matrix", 176))
 
     matrix_cards = [
@@ -2058,9 +2126,15 @@ def generate_engineering_matrix_svg(
         )
         proof_layouts.append(proof_rows)
         stack_layouts.append(stack_rows)
-        proof_heights.append(max(24, len(proof_rows) * 24 + max(0, len(proof_rows) - 1) * 10))
-        stack_heights.append(max(24, len(stack_rows) * 24 + max(0, len(stack_rows) - 1) * 10))
-        repo_heights.append(11 + max(0, len(cast(list[str], card["repo_lines"])) - 1) * 16)
+        proof_heights.append(
+            max(24, len(proof_rows) * 24 + max(0, len(proof_rows) - 1) * 10)
+        )
+        stack_heights.append(
+            max(24, len(stack_rows) * 24 + max(0, len(stack_rows) - 1) * 10)
+        )
+        repo_heights.append(
+            11 + max(0, len(cast(list[str], card["repo_lines"])) - 1) * 16
+        )
 
     proof_block_height = max(proof_heights)
     stack_block_height = max(stack_heights)
@@ -2085,13 +2159,28 @@ def generate_engineering_matrix_svg(
                 stroke="#22314A",
             )
         )
-        parts.append(rect(x + 18, y + 16, 34, 34, SURFACE_BG, radius=17, stroke="#22314A"))
+        parts.append(
+            rect(x + 18, y + 16, 34, 34, SURFACE_BG, radius=17, stroke="#22314A")
+        )
         parts.append(
             f'<image href="{get_skillicon_base64(icon_name)}" '
             f'x="{x + 27}" y="{y + 25}" width="16" height="16" />'
         )
-        parts.append(rect(x + 62, y + 20, 170, 18, SURFACE_BG, radius=9, stroke="#22314A"))
-        parts.append(text(x + 147, y + 33, str(card["title"]).upper(), size=10, weight=700, fill=accent, anchor="middle", letter_spacing=0.9))
+        parts.append(
+            rect(x + 62, y + 20, 170, 18, SURFACE_BG, radius=9, stroke="#22314A")
+        )
+        parts.append(
+            text(
+                x + 147,
+                y + 33,
+                str(card["title"]).upper(),
+                size=10,
+                weight=700,
+                fill=accent,
+                anchor="middle",
+                letter_spacing=0.9,
+            )
+        )
         parts.append(text(x + 18, y + 76, str(card["title"]), size=24, weight=700))
         parts.append(
             multiline_text(
@@ -2172,8 +2261,6 @@ def generate_engineering_matrix_svg(
     return "".join(parts)
 
 
-
-
 def generate_project_card_svg(config: dict[str, Any]) -> str:
     repo = str(config["repo"])
     label = str(config["label"])
@@ -2219,7 +2306,9 @@ def generate_project_card_svg(config: dict[str, Any]) -> str:
     cta_icon_x = content_x + max(18, (cta_width - cta_label_width) // 2 - 28)
     cta_bar_x = cta_icon_x + 24
     cta_text_x = cta_bar_x + 38 + cta_label_width // 2
-    cta_arrow_x = min(content_x + cta_width - 20, cta_text_x + cta_label_width // 2 + 24)
+    cta_arrow_x = min(
+        content_x + cta_width - 20, cta_text_x + cta_label_width // 2 + 24
+    )
 
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" '
@@ -2239,8 +2328,24 @@ def generate_project_card_svg(config: dict[str, Any]) -> str:
         "text{font-family:'Segoe UI',Arial,sans-serif}",
         "</style>",
         rect(0, 0, PROJECT_CARD_WIDTH, card_height, "url(#cardPanel)", radius=24),
-        animated_circle(PROJECT_CARD_WIDTH - 126, 44, 120, "url(#cardGlow)", "0.36;0.82;0.36", "7.2s", opacity=0.78),
-        rect(1, 1, PROJECT_CARD_WIDTH - 2, card_height - 2, "none", radius=23, stroke=BORDER),
+        animated_circle(
+            PROJECT_CARD_WIDTH - 126,
+            44,
+            120,
+            "url(#cardGlow)",
+            "0.36;0.82;0.36",
+            "7.2s",
+            opacity=0.78,
+        ),
+        rect(
+            1,
+            1,
+            PROJECT_CARD_WIDTH - 2,
+            card_height - 2,
+            "none",
+            radius=23,
+            stroke=BORDER,
+        ),
     ]
 
     parts.extend(section_kicker(34, top_padding, label, max(118, len(label) * 10)))
