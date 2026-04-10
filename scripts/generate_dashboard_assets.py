@@ -1681,8 +1681,8 @@ def generate_hero_banner_svg() -> str:
                 80,
                 184,
                 [
-                    "Backend, data and applied AI engineer shipping reliable systems across API,",
-                    "search and product boundaries.",
+                    "Backend, data and applied AI engineer shipping reliable",
+                    "systems across API, search and product boundaries.",
                 ],
                 size=18,
                 weight=500,
