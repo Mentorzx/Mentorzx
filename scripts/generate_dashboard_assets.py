@@ -587,6 +587,7 @@ def tech_chip(
     fill: str = SURFACE_BG,
     stroke: str = "#1E293B",
     fill_opacity: float | None = None,
+    tint_bg: bool = False,
 ) -> tuple[str, int]:
     meta = tech_meta(label)
     icon_name = cast(str | None, meta["icon"])
@@ -625,7 +626,7 @@ def tech_chip(
             label,
             size=font_size,
             weight=600,
-            fill=TEXT,
+            fill=color if tint_bg else TEXT,
         )
     )
     return "".join(parts), width
@@ -704,6 +705,7 @@ def render_chip_rows(
                 height=chip_height,
                 fill=fill,
                 fill_opacity=fill_opacity,
+                tint_bg=tint_bg,
             )
             parts.append(chip_svg)
             cursor_x += width
@@ -1194,7 +1196,7 @@ def generate_summary_svg(
     bar_gap = 12
 
     parts = [
-        '<svg xmlns="http://www.w3.org/2000/svg" '
+        '<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" '
         'width="1240" height="700" viewBox="0 0 1240 700" '
         'role="img" aria-labelledby="title desc">',
         '<title id="title">GitHub engineering dashboard and telemetry</title>',
@@ -1240,6 +1242,7 @@ def generate_summary_svg(
         "</defs>",
         "<style>",
         "text{font-family:'Segoe UI',Arial,sans-serif}",
+        "@media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; transform: none !important; } }",
         "</style>",
         rect(0, 0, 1240, 700, "url(#canvas)", radius=28),
         animated_circle(
@@ -1633,7 +1636,7 @@ def generate_hero_banner_svg() -> str:
     best_fit_rect_width = hero_cursor_end - 80 + 26
 
     parts = [
-        '<svg xmlns="http://www.w3.org/2000/svg" '
+        '<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" '
         'width="1280" height="500" viewBox="0 0 1280 500" '
         'role="img" aria-labelledby="title desc">',
         '<title id="title">Alex Lira portfolio banner</title>',
@@ -1660,6 +1663,7 @@ def generate_hero_banner_svg() -> str:
         "</defs>",
         "<style>",
         "text{font-family:'Segoe UI',Arial,sans-serif}",
+        "@media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; transform: none !important; } }",
         "</style>",
         rect(0, 0, 1280, 500, "url(#heroCanvas)", radius=28),
         animated_circle(
@@ -1768,7 +1772,7 @@ def generate_hero_banner_svg() -> str:
 
     gap_x = 12
     gap_y = 12
-    max_w = 596
+    max_w = 1100
 
     chip_x = 80
     chip_y = primary_stack_y + 36
@@ -1805,7 +1809,7 @@ def generate_engineering_matrix_svg(
     matrix_card_height = 392
 
     parts = [
-        '<svg xmlns="http://www.w3.org/2000/svg" '
+        '<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" '
         f'width="{SUITE_WIDTH}" height="{SUITE_HEIGHT}" '
         f'viewBox="0 0 {SUITE_WIDTH} {SUITE_HEIGHT}" '
         'role="img" aria-labelledby="title desc">',
@@ -1823,6 +1827,7 @@ def generate_engineering_matrix_svg(
         "</defs>",
         "<style>",
         "text{font-family:'Segoe UI',Arial,sans-serif}",
+        "@media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; transform: none !important; } }",
         "</style>",
         rect(0, 0, SUITE_WIDTH, SUITE_HEIGHT, "url(#suiteCanvas)", radius=28),
         rect(
@@ -2042,8 +2047,11 @@ def generate_engineering_matrix_svg(
     )
 
     legend_y = languages_card_y + 174
-    lane_end = [bar_x - 1, bar_x - 1, bar_x - 1]
-    lane_y = [legend_y, legend_y + 32, legend_y + 64]
+    columns = 4
+    gap_x = 32
+    col_width = (bar_width - (gap_x * (columns - 1))) // columns
+
+    grid_index = 0
     for (
         language,
         segment_start,
@@ -2055,40 +2063,18 @@ def generate_engineering_matrix_svg(
     ) in sorted(segment_positions, key=lambda item: item[1]):
         repo_count = next(count for lang, _, count in language_rows if lang == language)
         label_width = max(132, estimate_text_width(language, font_size=13) + 78)
-        target_x = segment_start + 8
 
-        chosen_lane = -1
-        clamped_x = 0
-        for i in range(len(lane_end)):
-            cand_x = max(target_x, lane_end[i] + 16)
-            clamped = min(cand_x, SUITE_WIDTH - label_width - 32)
-            if clamped > lane_end[i] + 2:
-                chosen_lane = i
-                clamped_x = clamped
-                break
-
-        if chosen_lane == -1:
-            chosen_lane = len(lane_end)
-            lane_end.append(bar_x - 1)
-            lane_y.append(lane_y[-1] + 32)
-            cand_x = max(target_x, lane_end[chosen_lane] + 16)
-            clamped_x = min(cand_x, SUITE_WIDTH - label_width - 32)
-
-        lane_index = chosen_lane
-        label_x = clamped_x
-        label_y = lane_y[lane_index]
-        lane_end[lane_index] = label_x + label_width
+        label_x = bar_x + (grid_index % columns) * (col_width + gap_x)
+        label_y = legend_y + (grid_index // columns) * 36
 
         x_centro = segment_start + segment_width // 2
         y_start = bar_y + bar_height + 2
         y_mid = y_start + 10
         y_end = label_y - 14
 
-        parts.extend(
+        parts_to_add = []
+        parts_to_add.extend(
             [
-                f'<polyline points="{x_centro},{y_start} {x_centro},{y_mid} {label_x+10},{y_mid} {label_x+10},{y_end}" '
-                f'stroke="{color}" opacity="0.25" fill="none" '
-                'stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />',
                 f'<image href="{get_skillicon_base64(icon_name)}" '
                 f'x="{label_x}" y="{label_y - 2}" width="16" height="16" />',
                 text(label_x + 22, label_y + 10, language, size=13, weight=700),
@@ -2110,6 +2096,8 @@ def generate_engineering_matrix_svg(
                 ),
             ]
         )
+        parts.extend(parts_to_add)
+        grid_index += 1
 
     matrix_y = languages_card_y + language_card_height + 58
     parts.append(
@@ -2362,15 +2350,16 @@ def generate_project_card_svg(config: dict[str, Any]) -> str:
     card_height = cta_y + cta_height + 20
     cta_label = "CLICK HERE TO REPOSITORY"
     cta_label_width = estimate_text_width(cta_label, font_size=12, letter_spacing=0.8)
-    cta_icon_x = content_x + max(18, (cta_width - cta_label_width) // 2 - 28)
-    cta_bar_x = cta_icon_x + 24
-    cta_text_x = cta_bar_x + 38 + cta_label_width // 2
-    cta_arrow_x = min(
-        content_x + cta_width - 20, cta_text_x + cta_label_width // 2 + 24
-    )
+    inner_width = 16 + 12 + 26 + 12 + cta_label_width + 16 + 14
+    start_x = content_x + (cta_width - inner_width) // 2
+
+    cta_icon_x = start_x
+    cta_bar_x = cta_icon_x + 16 + 12
+    cta_text_x = cta_bar_x + 26 + 12 + cta_label_width // 2
+    cta_arrow_x = start_x + inner_width
 
     parts = [
-        '<svg xmlns="http://www.w3.org/2000/svg" '
+        '<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" '
         f'width="{PROJECT_CARD_WIDTH}" height="{card_height}" '
         f'viewBox="0 0 {PROJECT_CARD_WIDTH} {card_height}" '
         'role="img" aria-labelledby="title desc">',
@@ -2385,6 +2374,7 @@ def generate_project_card_svg(config: dict[str, Any]) -> str:
         "</defs>",
         "<style>",
         "text{font-family:'Segoe UI',Arial,sans-serif}",
+        "@media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; transform: none !important; } }",
         "</style>",
         rect(0, 0, PROJECT_CARD_WIDTH, card_height, "url(#cardPanel)", radius=24),
         animated_circle(
@@ -2442,13 +2432,36 @@ def generate_project_card_svg(config: dict[str, Any]) -> str:
         )
     )
 
+    parts.append(
+        rect(
+            proof_x - 12,
+            section_label_y - 12,
+            section_width + 24,
+            content_height + 46,
+            "#FFFFFF",
+            opacity=0.03,
+            radius=12,
+        )
+    )
+    parts.append(
+        rect(
+            stack_x - 12,
+            section_label_y - 12,
+            section_width + 24,
+            content_height + 46,
+            "#FFFFFF",
+            opacity=0.03,
+            radius=12,
+        )
+    )
+
     proof_chips, _ = render_chip_rows(
         proof_x,
         section_content_y,
         proof_rows,
         max_width=section_width,
         chip_height=24,
-        font_size=10,
+        font_size=11,
         gap_y=8,
         tint_bg=True,
     )
@@ -2458,7 +2471,7 @@ def generate_project_card_svg(config: dict[str, Any]) -> str:
         stack_rows,
         max_width=section_width,
         chip_height=24,
-        font_size=10,
+        font_size=11,
         gap_y=8,
         tint_bg=True,
     )
