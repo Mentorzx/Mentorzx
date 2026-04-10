@@ -1,0 +1,12 @@
+9366503 Fix SVGs merge conflict and text wrapping
+13a092a fix(assets): adjust text wrapping in hiring snapshot
+adffade docs: refresh profile dashboard assets
+53838a6 fix(assets): resolve telemetry overlaps and pill grid spacing
+67734df fix: prevent text clipping on the right edge of language chart
+
+13a092a fix(assets): adjust text wrapping in hiring snapshot
+adffade docs: refresh profile dashboard assets
+53838a6 fix(assets): resolve telemetry overlaps and pill grid spacing
+67734df fix: prevent text clipping on the right edge of language chart
+2a984ba docs: refresh profile dashboard assets
+
